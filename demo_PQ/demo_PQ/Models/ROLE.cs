@@ -1,0 +1,18 @@
+namespace demo_PQ.Models
+{
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("ROLE")]
+    public partial class ROLE
+    {
+        [Column(TypeName = "numeric")]
+        public decimal ID { get; set; }
+
+        [StringLength(50)]
+        public string NAME { get; set; }
+    }
+}

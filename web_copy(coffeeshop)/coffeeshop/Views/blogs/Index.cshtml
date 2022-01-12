@@ -1,0 +1,31 @@
+﻿@model List<coffeeshop.Context.Blog>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<br />
+<!--Start Blog-->
+<div id="blog-section" class="container section">
+    <div class="row header-section">
+        <h1>Blogs</h1>
+    </div>
+    <div class="row blog-list" >
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-sm-4 blog-item">
+                <div class="col-12 " >
+                    <img src="~/Content/acess/img/@item.Img" alt="Error Img" width="370" height="240" > 
+                </div>
+                <br />
+                <h5>@item.Tenlogs</h5>
+                <h6>By Admin / 1st May, 2021</h6>
+                <p>@item.Chitiet</p>
+                <button type="button" class="btn btn-warning">Read More</button>
+            </div>
+
+        }
+
+    </div>
+    </div>
+<!--End Blog-->

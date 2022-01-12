@@ -1,0 +1,44 @@
+﻿@model coffeeshop.Context.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 align="center" class="text-primary">DETAILS</h2>
+
+<div>
+    <h4 align="center" class="text-danger">Category</h4>
+    <hr />
+    <dl class="dl-horizontal  mx-5">
+        <dt class="text-primary">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd class="p-2">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt class="text-primary">
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd class="p-2">
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+        <dt class="text-primary">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd class="p-2">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p class="mx-4">
+    <a class="text-decoration-none  border border-primary rounded bg-warning btn btn-primary text-primary" @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |</a>
+
+    <a class="text-decoration-none  border border-primary rounded bg-warning btn btn-primary text-primary" @Html.ActionLink("Back to Category", "Index")</a>
+</p>

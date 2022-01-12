@@ -1,0 +1,31 @@
+﻿@model List<coffeeshop.Context.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<!--Start Product-->
+<div id="product-section" class="container section">
+    <div class="row header-section">
+        <h1>Products</h1>
+    </div>
+    <div class="row product-list">
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-md-4 product-item">
+                <div class="product-img">
+                    <img src="~/Content/acess/img/@item.Img" alt="Product-1" style="width:151px;height:237px;">
+                </div>
+                <h6>@item.Name</h6>
+                <h6 style="color: #e5b524;">
+                    <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+                </h6>
+                <p>@item.Price VND</p>
+                <button type="button" class="btn btn-warning">Buy Now</button>
+            </div>
+
+        }
+
+    </div>
+</div>
+<!--End Product-->

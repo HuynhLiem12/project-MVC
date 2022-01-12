@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model demo_PQ.Models.USER
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true,null,new { @class ="text-danger" })
+    <table>
+        <tr><td><br /></td></tr>
+        <tr>
+            <td>Ten Dang Nhap</td>
+            <td>
+                @Html.TextBoxFor(model => model.NAME, new { @class= "form-control", @id="", @placeholder="UserName" }  )
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>Mat Khau</td>
+            <td>
+                @Html.TextBoxFor(model => model.PASSWORD, new { @class = "form-control", @id = "", @placeholder = "Password", @type ="password" })
+
+            </td>
+        </tr>
+        <tr><td><button type="submit">login</button></td></tr>
+    </table>
+}
+
+

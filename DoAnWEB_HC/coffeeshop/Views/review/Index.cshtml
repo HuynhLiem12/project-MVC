@@ -1,0 +1,33 @@
+﻿@model List<coffeeshop.Context.Review>
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<!--Start Review-->
+<div id="review-section" class="container section">
+    <div class="row header-section">
+        <h1>Review</h1>
+    </div>
+    <div class="row review-list">
+        @foreach(var item in Model)
+            {
+        <div class="col-12 col-md-4 review-item">
+            <div class="img-icon">
+                <img src="~/Content/acess/img/quote-img.png" alt="">
+            </div>
+            <p>@item.Motadai</p>
+            <div>
+                <img class="cus-img" src="~/Content/acess/img/@item.Img" alt="">
+            </div>
+            <p class="cus-name">@item.Name</p>
+            <h6 style="color: #e5b524;">
+                <i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
+            </h6>
+        </div>
+                
+            }
+    
+    </div>
+</div>
+<!--End Review-->

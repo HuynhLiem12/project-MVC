@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/admin/admincs.css">
+    <link rel="stylesheet" href="~/Content/admin/lib/font_icons_css/font-awesome.min.css">
+    <link href="~/Content/admin/bootstrap.min.css" rel="stylesheet" />
+    
+    <title>Trang Quản Trị</title>
+</head>
+<body>
+
+
+
+
+    <div class="sidebar">
+        <a class="active" @Html.ActionLink("Admin","Index","Home") </a>
+        @Html.ActionLink("Product", "Index", "Product")
+        <a href="#contact">Contact</a>
+        <a href="#messages">Messages</a>
+
+    </div>
+
+    <div class="content">
+
+        <div class="border">
+            <input type="text" placeholder="Search..." style="border-radius: 10px ;border: none;height: 25px;width: 20%;"> <a href="#"><i class="fa fa-search" style="color:rgb(45, 32, 58); margin-left: 10px;"></i></a>
+            
+        </div>
+        
+        @RenderBody()
+      
+
+    </div>
+
+</body>
+</html>

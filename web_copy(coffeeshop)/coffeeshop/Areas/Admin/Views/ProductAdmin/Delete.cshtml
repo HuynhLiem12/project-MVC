@@ -1,0 +1,52 @@
+﻿@model coffeeshop.Context.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 align="center" class="text-primary">DELETE</h2>
+
+<h3 align="center" class="text-danger">Are you sure you want to delete this?</h3>
+<div>
+    <h4 align="center" class="text-danger">Product</h4>
+    <hr />
+    <dl class="dl-horizontal mx-5">
+        <dt  class="text-primary">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd  class="p-2">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt  class="text-primary">
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd class="p-2">
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+        <dt  class="text-primary">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt >
+
+        <dd class="p-2">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Delete", "ProductAdmin", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color text-decoration-none ">
+    <input type="submit" value="Delete" class="btn btn-warning text-primary mx-3" />| 
+    <div class="btn btn-warning text-decoration-none mx-2">
+        <a class="text-decoration-none text-primary" @Html.ActionLink("Back to Product", "Index")
+ 
+    </div>
+</div>
+    }
+</div>

@@ -1,0 +1,52 @@
+﻿@model coffeeshop.Models.Category_Other
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<br />
+<!--Start Menu-->
+<div id="menu-section" class="container section">
+    <div class="row header-section">
+        <h1>Coffee Menu</h1>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.ListCategory)
+        {
+            <div class="col-12 col-md-4 menu-child">
+                <div class="menu-img">
+                    <img src="~/Content/acess/img/@item.Img" alt="">
+                </div>
+                <h6>@item.Name</h6>
+                <p>@item.Price VND</p>
+                <button type="button" class="btn btn-warning">Order Now</button>
+            </div>
+
+        }
+
+    </div>
+
+</div>
+
+<div id="other-section" class="container section">
+    <div class="row header-section">
+        <h1>Other</h1>
+    </div>
+    <div class="row other-list">
+        @foreach (var item in Model.ListOther)
+        {
+            <div class="col-12 col-md-4 other-item">
+                <div class="other-img">
+                    <img src="~/Content/acess/img/@item.Img" alt="">
+                </div>
+                <h6>@item.Name</h6>
+                <p>@item.Price VND</p>
+                <button type="button" class="btn btn-warning">Order Now</button>
+            </div>
+
+        }
+
+    </div>
+
+</div>
+<!--End Menu-->
